@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/index.js"></script>
+    <script src="js/control.js"></script>
+    <title>Exercício</title>
+</head>
+<body>
+    <div class="container flex-column border mt-1 pt-3">
+        <h2 class="hover-default">CÁLCULO DE PCC</h2>
+        <p class="hover-default">Confira se seu tcc (ou ufc sei lá, nem assisti não tenho netflix) está adequado á sua altura</p>
+        <form id="meuForm" lass="formulario mt-2" method="get">
+            <p class="hover-default">Nome:</p>
+            <input class="input" type="text" name="txtNome" id="txtNome">
+            <p class="hover-default">Idade:</p>
+            <input class="input" type="text" name="txtIdade" id="txtIdade" onkeypress="return permitirApenasNumeros(event, 'txtIdade')">
+            <p class="hover-default">Peso:</p>
+            <input class="input" type="text" name="txtPeso" id="txtPeso" onkeypress="return permitirApenasNumeros(event, 'txtPeso')">
+            <p class="hover-default">Altura:</p>
+            <input class="input" type="text" name="txtAltura" id="txtAltura" onkeypress="return permitirApenasNumeros(event, 'txtAltura')">
+            <button class="btn-calcular mt-3" type="submit">Calcular</button>
+        </form>
+        
+        <table id="tabelaDados" class="mt-4" cellpadding="0" cellspacing="0" border="0">
+            <thead class="border">
+                <tr class="border">
+                    <th class=""><p>Nome</p></th>
+                    <th><p>Idade</p></th>
+                    <th><p>Peso</p></th>
+                    <th><p>Altura</p></th>
+                    <th><p>IMC</p></th>
+                    <th><p>Classificação</p></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+    </div>
+    <div class="container">
+        
+    </div>
+
+    
+</body>
+</html>
