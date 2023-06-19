@@ -1,3 +1,4 @@
+
 function permitirApenasNumeros(event, inputId) {
     var scan = document.getElementById(inputId);
     var key = event.key;
@@ -19,11 +20,20 @@ function permitirApenasNumeros(event, inputId) {
             scan.value += '.';
         } else if (scan.value.length > 2) {
             scan.value = scan.value.slice(0, 3);
-        }
+        }   
     }
     else if (scan.id === 'txtPeso') {
         if (scan.value.length >= 3 && event.keyCode !== 8) {
             event.preventDefault();
         }
     }
+}
+
+function verificEnvio(event, inputClass){
+    const inputs = document.getElementsByClassName(inputClass);
+
+    if(inputs.value == null){
+        event.preventDefault();
+    }
+
 }
