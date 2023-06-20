@@ -1,4 +1,21 @@
+function verificarEnvio(event, inputClass) {
+     // Evita que o formulário seja enviado
 
+    const inputs = document.getElementsByClassName(inputClass);
+    var emptyField = false;
+
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value.trim() === '') {
+            emptyField = true;
+            break;
+        }
+    }
+
+    if (emptyField) {
+        event.preventDefault();
+        alert('Por favor, preencha todos os campos antes de enviar o formulário.');
+    } 
+}
 function permitirApenasNumeros(event, inputId) {
     var scan = document.getElementById(inputId);
     var key = event.key;
@@ -29,11 +46,9 @@ function permitirApenasNumeros(event, inputId) {
     }
 }
 
-function verificEnvio(event, inputClass){
-    const inputs = document.getElementsByClassName(inputClass);
 
-    if(inputs.value == null){
-        event.preventDefault();
-    }
 
-}
+
+
+
+
